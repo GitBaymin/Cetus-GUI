@@ -79,7 +79,12 @@ docker节点已经默认安装了salt-master，此处只需安装Minion节点即
 
 * 测试
 
-  在镜像内部执行，测试Minion是否配置成功。
+  进入镜像内部
+```
+docker exec -it (CONTAINER ID) /bin/bash  
+```
+  
+  执行，测试Minion是否配置成功。
 
 ```
     # salt-key -A -y
