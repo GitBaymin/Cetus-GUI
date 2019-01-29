@@ -15,8 +15,10 @@
 **所有与项目相关节点**确保有Python3环境。
 
 **所有节点**确保执行下列命令：
-
-* sudo yum install gcc gcc-c++ python3-devel python3-pip git
+* sudo yum install epel-release
+* sudo yum install gcc gcc-c++ 
+* sudo yum install python34-devel.x86_64 python34-pip.noarch
+* sudo yum install git
 * sudo pip3 install pymysql
 
 ---
