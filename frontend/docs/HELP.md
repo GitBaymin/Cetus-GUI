@@ -34,7 +34,7 @@
 ```
   # sudo yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-selinux docker-engine-selinux docker-engine
   # sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-  # sudo yum-config-manager --add-repo https://mirrors.ustc.edu.cn/docker-ce/linux/centos/docker-ce.repo
+  # sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
   # sudo yum makecache fast
   # sudo yum install docker-ce
   # sudo pip3 install -U docker-compose
@@ -111,18 +111,18 @@ docker节点已经默认安装了salt-master，此处只需安装Minion节点即
     # sudo vi /etc/salt/minion
   
     master: Master节点ip，此处填写docker节点所在宿主机的ip即可
-    id: Minion唯一标识
+    id: Minion唯一标识，可以不指定，默认主机名
 ```
 
 * 启动
 
 ```
-    # sudo service salt-minion start
+    # sudo systemctl start salt-minion
 ```
 
 * 测试
 
-  进入镜像内部
+  进入cetus-gui镜像内部
 ```
     # docker exec -it (CONTAINER ID) /bin/bash  
 ```
